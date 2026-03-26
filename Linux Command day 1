@@ -1,0 +1,12 @@
+sudo -i {to get home location of root user}
+Su {Switch User}
+cd {change Directory}
+cd var/
+cat-to read Entire file
+vi- to edit the file
+more auth.log -open file but page wise
+tail-f 50 auth.log (last 50 line)
+grep- Is a command to find key Word
+cat auth.log | grep error
+cat auth.log | grep somesh
+history
