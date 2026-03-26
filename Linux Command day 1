@@ -1,12 +1,110 @@
-sudo -i {to get home location of root user}
-Su {Switch User}
-cd {change Directory}
-cd var/
-cat-to read Entire file
-vi- to edit the file
-more auth.log -open file but page wise
-tail-f 50 auth.log (last 50 line)
-grep- Is a command to find key Word
+A beginner-to-advanced level Linux command guide for DevOps Engineers, System Administrators, and Cloud Professionals.
+
+📌 Table of Contents
+🔐 User Commands
+📂 Directory Navigation
+📁 File Management
+📖 File Viewing
+📜 Log Monitoring
+🔍 Search Commands
+🔑 SSH & Keys
+🌐 Network Commands
+⚙️ System Info
+👥 User Activity
+📊 Monitoring
+🗂️ File Structure
+🎯 DevOps Use Cases
+❓ Interview Questions
+🔐 User & Permission Commands
+sudo -i        # Switch to root user
+su             # Switch user
+whoami         # Current user
+📂 Directory Navigation
+pwd
+cd
+cd /var
+cd ~
+📁 File Management
+mkdir folder_name
+touch file_name
+cp file1 file2
+mv file1 file2
+rm file_name
+📖 File Viewing & Editing
+cat file.txt
+vi file.txt
+✏️ VI Editor
+i        # Insert mode
+:wq      # Save & exit
+📜 Log Monitoring
+more auth.log
+less auth.log
+tail -f auth.log
+tail -n 50 auth.log
+🔍 Search Commands
+grep keyword file
 cat auth.log | grep error
 cat auth.log | grep somesh
+🔑 SSH & Key Management
+ssh-keygen
+cd /root/.ssh/
+cat id_rsa.pub
+
+ssh -i private_key username@ip
+🌐 Network Commands
+hostname
+hostname -i
+curl ipconfig.me
+⚙️ System Information
+uname
+uname -a
+uptime
+👥 User Activity
 history
+w
+who
+📊 Monitoring
+top
+free
+free -g
+free -h
+df
+df -h
+🗂️ Linux File Structure
+/        → Root directory
+/etc     → Configuration files
+/bin     → Executables
+/usr     → User programs
+/tmp     → Temporary files
+/dev     → Device files
+🎯 DevOps Real-Time Use Cases
+🔹 1. Troubleshooting Production Issue
+tail -f /var/log/app.log
+
+👉 Live error monitoring
+
+🔹 2. Find Errors Quickly
+grep error /var/log/app.log
+🔹 3. Check Server Health
+top
+free -h
+df -h
+🔹 4. Connect to Remote Server
+ssh -i key.pem ubuntu@public-ip
+🔹 5. Debug User Activity
+history
+who
+w
+❓ Interview Questions
+🔸 Basic
+What is the difference between su and sudo -i?
+Difference between cat, less, and more?
+What is grep and how does it work?
+🔸 Intermediate
+Explain tail -f with real-time example
+What is pipe (|) in Linux?
+How does SSH authentication work?
+🔸 Advanced
+How do you debug a production issue using Linux commands?
+How do you monitor logs in real-time?
+How to secure SSH access in servers?
