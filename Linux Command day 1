@@ -1,4 +1,13 @@
-A beginner-to-advanced level Linux command guide for DevOps Engineers, System Administrators, and Cloud Professionals.
+🚀 Linux Commands Cheat Sheet (Beginner → Advanced)
+
+
+
+
+
+
+
+
+A complete Linux command guide for DevOps Engineers, System Administrators, and Cloud Professionals.
 
 📌 Table of Contents
 🔐 User Commands
@@ -13,6 +22,7 @@ A beginner-to-advanced level Linux command guide for DevOps Engineers, System Ad
 👥 User Activity
 📊 Monitoring
 🗂️ File Structure
+📝 Advanced Commands
 🎯 DevOps Use Cases
 ❓ Interview Questions
 🔐 User & Permission Commands
@@ -33,8 +43,9 @@ rm file_name
 📖 File Viewing & Editing
 cat file.txt
 vi file.txt
-✏️ VI Editor
+✏️ VI Basics
 i        # Insert mode
+Esc      # Exit insert mode
 :wq      # Save & exit
 📜 Log Monitoring
 more auth.log
@@ -63,7 +74,7 @@ uptime
 history
 w
 who
-📊 Monitoring
+📊 System Monitoring
 top
 free
 free -g
@@ -71,40 +82,87 @@ free -h
 df
 df -h
 🗂️ Linux File Structure
-/        → Root directory
-/etc     → Configuration files
-/bin     → Executables
-/usr     → User programs
-/tmp     → Temporary files
-/dev     → Device files
+/        → Root directory  
+/etc     → Configuration files  
+/bin     → Executables  
+/usr     → User programs  
+/tmp     → Temporary files  
+/dev     → Device files  
+📝 Advanced Linux Commands
+✏️ VI Editor (Advanced 🔥)
+:set nu    # Show line numbers
+:d         # Delete current line
+:3d        # Delete 3 lines
+/word      # Search
+n          # Next result
+:w         # Save
+:q         # Quit
+:q!        # Force quit
+📦 Package Management
+🔹 Debian/Ubuntu (APT)
+apt-get update
+apt install nginx -y
+🔹 Best Practice 🚀
+sudo apt-get update && sudo apt install nginx -y
+🔹 RedHat/CentOS (YUM)
+yum install nginx -y
+⚙️ Service Management (systemctl)
+systemctl status nginx
+systemctl start nginx
+systemctl stop nginx
+systemctl restart nginx
+systemctl enable nginx
+🌍 Networking Tools
+ifconfig
+ping google.com
+ss
+dig google.com
+🧠 Shell Info
+echo $0
+📊 Package Manager Summary
+OS Family	Package Manager
+Debian/Ubuntu	apt / apt-get
+RedHat/CentOS	yum
 🎯 DevOps Real-Time Use Cases
-🔹 1. Troubleshooting Production Issue
+🔹 Troubleshooting Production Issue
 tail -f /var/log/app.log
-
-👉 Live error monitoring
-
-🔹 2. Find Errors Quickly
+🔹 Find Errors Quickly
 grep error /var/log/app.log
-🔹 3. Check Server Health
+🔹 Check Server Health
 top
 free -h
 df -h
-🔹 4. Connect to Remote Server
+🔹 Connect to Server
 ssh -i key.pem ubuntu@public-ip
-🔹 5. Debug User Activity
+🔹 Debug User Activity
 history
 who
 w
+🔹 Install & Start Web Server
+sudo apt-get update && sudo apt install nginx -y
+systemctl start nginx
+🔹 Debug Network Issue
+ss
+dig google.com
+🔹 Edit Config File
+vi /etc/nginx/nginx.conf
 ❓ Interview Questions
 🔸 Basic
-What is the difference between su and sudo -i?
-Difference between cat, less, and more?
-What is grep and how does it work?
+Difference between su and sudo -i
+Difference between cat, less, more
+What is grep?
 🔸 Intermediate
-Explain tail -f with real-time example
-What is pipe (|) in Linux?
-How does SSH authentication work?
+Explain tail -f
+What is pipe (|)?
+How SSH works?
 🔸 Advanced
-How do you debug a production issue using Linux commands?
-How do you monitor logs in real-time?
-How to secure SSH access in servers?
+How to debug production issues?
+How to monitor logs in real-time?
+How to secure SSH?
+💡 Pro Tips 🚀
+Always run apt-get update before install
+Use less instead of cat for large files
+Combine grep + tail for fast debugging
+Use systemctl enable for auto-start
+Learn vi properly (used in production servers)
+⭐ Support
