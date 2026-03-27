@@ -1,0 +1,59 @@
+🚀 **DevOps & Cloud Quick Notes – GCP + Linux Essentials**
+
+Today I revised some important **GCP IAM** and **Linux administration** commands that every DevOps Engineer should have at their fingertips 👇
+
+🔐 **GCP – Grant Access (IAM)**
+➡️ Go to IAM → Grant Access
+➡️ Add user email in *New Principal*
+➡️ Assign appropriate role (Viewer/Editor/Custom)
+
+🐧 **Linux Commands Cheat Sheet**
+
+👤 **User & Access Management**
+
+* Create user: `adduser somesh`
+* Switch user: `su username`
+* Exit user: `exit`
+* Change password: `passwd`
+* Delete user: `userdel username`
+* Add user to group: `usermod -aG group user`
+* Check groups: `getent group`
+* Delete group: `delgroup groupname`
+
+⚠️ Deleting a group does NOT delete users, it only removes group association
+
+🔑 **Root Access**
+
+* Edit sudoers: `vi /etc/sudoers`
+* Add: `username ALL=(ALL:ALL) ALL`
+
+📂 **File & Permissions**
+
+* Check permissions: `ls -l`
+* Make executable: `chmod +x script.sh`
+* Folder size: `du -sh`
+
+📊 **Process Monitoring**
+
+* All processes: `ps -aef`
+* User-specific: `ps -u username`
+* Java processes: `ps -aef | grep java`
+* OOM issues: `ps -aef | grep oom`
+
+📦 **Backup & Archiving**
+
+* Create tar: `tar -cvf backup.tar myfiles`
+* Extract tar: `tar -xvf backup.tar`
+
+☁️ **Log Backup to S3 (Basic Flow)**
+
+1. Compress logs using `tar`
+2. Upload using AWS CLI:
+   `aws s3 cp backup.tar s3://bucket-name/`
+
+📁 **Quick File Creation**
+`mkdir myfiles && touch myfiles/{file1.txt,file2.txt}`
+
+🧠 Small commands, BIG impact in real-world troubleshooting & production support!
+
+#DevOps #Linux #GCP #CloudComputing #SRE #AzureDevOps #Terraform #Kubernetes
